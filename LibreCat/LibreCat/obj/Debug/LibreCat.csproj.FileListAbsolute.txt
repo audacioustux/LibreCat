@@ -1,0 +1,15 @@
+C:\Users\Tanjim Hossain\Documents\GitHub\LibreCat\LibreCat\LibreCat\obj\Debug\LibreCat.csprojAssemblyReference.cache
+C:\Users\Tanjim Hossain\Documents\GitHub\LibreCat\LibreCat\LibreCat\obj\Debug\MainWindow.g.cs
+C:\Users\Tanjim Hossain\Documents\GitHub\LibreCat\LibreCat\LibreCat\obj\Debug\App.g.cs
+C:\Users\Tanjim Hossain\Documents\GitHub\LibreCat\LibreCat\LibreCat\obj\Debug\LibreCat_MarkupCompile.cache
+C:\Users\Tanjim Hossain\Documents\GitHub\LibreCat\LibreCat\LibreCat\obj\Debug\LibreCat_MarkupCompile.lref
+C:\Users\Tanjim Hossain\Documents\GitHub\LibreCat\LibreCat\LibreCat\bin\Debug\LibreCat.exe.config
+C:\Users\Tanjim Hossain\Documents\GitHub\LibreCat\LibreCat\LibreCat\bin\Debug\LibreCat.exe
+C:\Users\Tanjim Hossain\Documents\GitHub\LibreCat\LibreCat\LibreCat\bin\Debug\LibreCat.pdb
+C:\Users\Tanjim Hossain\Documents\GitHub\LibreCat\LibreCat\LibreCat\obj\Debug\MainWindow.baml
+C:\Users\Tanjim Hossain\Documents\GitHub\LibreCat\LibreCat\LibreCat\obj\Debug\LibreCat.g.resources
+C:\Users\Tanjim Hossain\Documents\GitHub\LibreCat\LibreCat\LibreCat\obj\Debug\LibreCat.Properties.Resources.resources
+C:\Users\Tanjim Hossain\Documents\GitHub\LibreCat\LibreCat\LibreCat\obj\Debug\LibreCat.Resource1.resources
+C:\Users\Tanjim Hossain\Documents\GitHub\LibreCat\LibreCat\LibreCat\obj\Debug\LibreCat.csproj.GenerateResource.cache
+C:\Users\Tanjim Hossain\Documents\GitHub\LibreCat\LibreCat\LibreCat\obj\Debug\LibreCat.exe
+C:\Users\Tanjim Hossain\Documents\GitHub\LibreCat\LibreCat\LibreCat\obj\Debug\LibreCat.pdb
