@@ -9,6 +9,9 @@
         Width="1280" Height="720">
 
     <DockPanel>
+        <DockPanel.Background>
+            <ImageBrush ImageSource="/librecat;component/res/book-reading.png" Stretch="Uniform" AlignmentX="Center" AlignmentY="Center" Viewport=".25 .25 .5 .5" Opacity="0.5"></ImageBrush>
+        </DockPanel.Background>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
                 <MenuItem Header="_New" />
@@ -31,28 +34,52 @@
                 <TextBlock Text="69 Books" HorizontalAlignment="Right"/>
             </StackPanel>
         </Grid>
-        <StackPanel>
-            <StackPanel.Background>
-                <ImageBrush ImageSource="/librecat;component/res/book-reading.png" Stretch="Uniform" AlignmentX="Center" AlignmentY="Center" Viewport=".25 .25 .5 .5" Opacity="0.5"></ImageBrush>
-            </StackPanel.Background>
-            <!-- Search -->
-            <Grid Margin="0 64 0 64">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width=".5*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width=".5*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Border Grid.Column="1" Padding="10 5 5 5" BorderThickness="2,2,2,2" BorderBrush="RoyalBlue" CornerRadius="2,2,2,2">
-                    <Border.Background>
-                        <SolidColorBrush Color="AliceBlue" Opacity="0.5" />
-                    </Border.Background>
-                    <TextBox Text="Search" BorderBrush="Transparent" Background="Transparent" BorderThickness="0" FontSize="16" FontWeight="SemiBold" FontStretch="UltraExpanded"></TextBox>
-                </Border>
-            </Grid>
-        </StackPanel>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <!-- Search -->
+                <Grid Margin="0 64 0 64">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".5*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width=".5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Column="1" Padding="10 5 5 5" BorderThickness="2,2,2,2" BorderBrush="RoyalBlue" CornerRadius="2,2,2,2">
+                        <Border.Background>
+                            <SolidColorBrush Color="AliceBlue" Opacity="0.5" />
+                        </Border.Background>
+                        <Grid VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Background="Transparent" BorderBrush="Transparent" BorderThickness="0" FontSize="16" FontWeight="SemiBold" FontStretch="UltraExpanded" AcceptsReturn="True" x:Name="Search_TBox"/>
+                            <TextBlock IsHitTestVisible="False" Text="Search by Book Title, Author, Topics... yoh wish! (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧" FontFamily="Source Code Pro" Background="Transparent" Opacity=".6" FontSize="14" FontWeight="SemiBold" FontStretch="UltraExpanded" VerticalAlignment="Center" HorizontalAlignment="Left">
+                                <TextBlock.Style>
+                                    <Style TargetType="{x:Type TextBlock}">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Text, ElementName=Search_TBox}" Value="">
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                            <Button Width="30" Background="Transparent" BorderThickness="0" Padding="5 0 5 0" Grid.Column="1">
+                                <Image Source="/librecat;component/Resources/microphone.png"></Image>
+                            </Button>
+                        </Grid>
+                    </Border>
+                    <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right">
+                        <Button Content="Advance Filtering Options" Background="Transparent" BorderThickness="0" FontWeight="SemiBold" Foreground="Blue" Opacity=".8"/>
+                    </StackPanel>
+                    
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
     </DockPanel>
 </Window>
