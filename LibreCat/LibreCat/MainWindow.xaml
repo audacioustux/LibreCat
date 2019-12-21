@@ -37,7 +37,7 @@
         <ScrollViewer VerticalScrollBarVisibility="Auto">
             <StackPanel>
                 <!-- Search -->
-                <Grid Margin="0 64 0 64">
+                <Grid Margin="0 64 0 128">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width=".5*"/>
                         <ColumnDefinition Width="*"/>
@@ -57,7 +57,7 @@
                                 <ColumnDefinition Width="auto"/>
                             </Grid.ColumnDefinitions>
                             <TextBox Background="Transparent" BorderBrush="Transparent" BorderThickness="0" FontSize="16" FontWeight="SemiBold" FontStretch="UltraExpanded" AcceptsReturn="True" x:Name="Search_TBox"/>
-                            <TextBlock IsHitTestVisible="False" Text="Search by Book Title, Author, Topics... yoh wish! (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧" FontFamily="Source Code Pro" Background="Transparent" Opacity=".6" FontSize="14" FontWeight="SemiBold" FontStretch="UltraExpanded" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <TextBlock IsHitTestVisible="False" Text="Search by Book Title, Author, Topics... yoh wish! (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧" FontFamily="consolas" Background="Transparent" Opacity=".6" FontSize="14" FontWeight="SemiBold" FontStretch="UltraExpanded" VerticalAlignment="Center" HorizontalAlignment="Left">
                                 <TextBlock.Style>
                                     <Style TargetType="{x:Type TextBlock}">
                                         <Setter Property="Visibility" Value="Collapsed"/>
@@ -69,7 +69,7 @@
                                     </Style>
                                 </TextBlock.Style>
                             </TextBlock>
-                            <Button Width="30" Background="Transparent" BorderThickness="0" Padding="5 0 5 0" Grid.Column="1">
+                            <Button Width="30" Background="Transparent" BorderThickness="0" Padding="5 0 5 0" Grid.Column="1" Click="speech_rec">
                                 <Image Source="/librecat;component/Resources/microphone.png"></Image>
                             </Button>
                         </Grid>
@@ -77,8 +77,120 @@
                     <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right">
                         <Button Content="Advance Filtering Options" Background="Transparent" BorderThickness="0" FontWeight="SemiBold" Foreground="Blue" Opacity=".8"/>
                     </StackPanel>
-                    
                 </Grid>
+
+                <!-- Trending -->
+                <StackPanel Margin="24 24 24 24" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                        <Image Source="/librecat;component/res/trending.png" Height="20" Margin="0 0 10 0"/>
+                        <TextBlock Text="Trending" FontSize="18" FontWeight="Bold" Foreground="Gray" FontFamily="consolas" />
+                    </StackPanel>
+                    <ScrollViewer VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto">
+                        <StackPanel Orientation="Horizontal" Margin="-15">
+                            <StackPanel MaxWidth="120" Margin="15">
+                                <Border BorderThickness="1" CornerRadius="2,2,2,2" BorderBrush="Gray" Background="AliceBlue">
+                                    <Image Source="/librecat;component/res/Rust2018_front.png"/>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel MaxWidth="120" Margin="15">
+                                <Border BorderThickness="1" CornerRadius="2,2,2,2" BorderBrush="Gray" Background="AliceBlue">
+                                    <Image Source="/librecat;component/res/Rust2018_front.png"/>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Margin="15" MaxWidth="120">
+                                <Border  BorderThickness="1" CornerRadius="2,2,2,2" BorderBrush="Gray" Background="AliceBlue">
+                                    <Image Source="/librecat;component/res/Rust2018_front.png"/>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel MaxWidth="120" Margin="15">
+                                <Border BorderThickness="1" CornerRadius="2,2,2,2" BorderBrush="Gray" Background="AliceBlue">
+                                    <Image Source="/librecat;component/res/Rust2018_front.png"/>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel MaxWidth="120" Margin="15">
+                                <Border BorderThickness="1" CornerRadius="2,2,2,2" BorderBrush="Gray" Background="AliceBlue">
+                                    <Image Source="/librecat;component/res/Rust2018_front.png"/>
+                                </Border>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                </StackPanel>
+                <!-- // Trending -->
+                <!-- Popular -->
+                <StackPanel Margin="24 24 24 24" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                        <Image Source="/librecat;component/res/popular.png" Height="20" Margin="0 0 10 0"/>
+                        <TextBlock Text="Popular" FontSize="18" FontWeight="Bold" Foreground="Gray" FontFamily="consolas" />
+                    </StackPanel>
+                    <ScrollViewer VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto">
+                        <StackPanel Orientation="Horizontal" Margin="-15">
+                            <StackPanel MaxWidth="120" Margin="15">
+                                <Border BorderThickness="1" CornerRadius="2,2,2,2" BorderBrush="Gray" Background="AliceBlue">
+                                    <Image Source="/librecat;component/res/Rust2018_front.png"/>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel MaxWidth="120" Margin="15">
+                                <Border BorderThickness="1" CornerRadius="2,2,2,2" BorderBrush="Gray" Background="AliceBlue">
+                                    <Image Source="/librecat;component/res/Rust2018_front.png"/>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Margin="15" MaxWidth="120">
+                                <Border  BorderThickness="1" CornerRadius="2,2,2,2" BorderBrush="Gray" Background="AliceBlue">
+                                    <Image Source="/librecat;component/res/Rust2018_front.png"/>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel MaxWidth="120" Margin="15">
+                                <Border BorderThickness="1" CornerRadius="2,2,2,2" BorderBrush="Gray" Background="AliceBlue">
+                                    <Image Source="/librecat;component/res/Rust2018_front.png"/>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel MaxWidth="120" Margin="15">
+                                <Border BorderThickness="1" CornerRadius="2,2,2,2" BorderBrush="Gray" Background="AliceBlue">
+                                    <Image Source="/librecat;component/res/Rust2018_front.png"/>
+                                </Border>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                </StackPanel>
+                <!-- // Popular -->
+                <!-- Recent -->
+                <StackPanel Margin="24 24 24 24" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                        <Image Source="/librecat;component/res/recent.png" Height="20" Margin="0 0 10 0"/>
+                        <TextBlock Text="Recent" FontSize="18" FontWeight="Bold" Foreground="Gray" FontFamily="consolas" />
+                    </StackPanel>
+                    <ScrollViewer VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto">
+                        <StackPanel Orientation="Horizontal" Margin="-15">
+                            <StackPanel MaxWidth="120" Margin="15">
+                                <Border BorderThickness="1" CornerRadius="2,2,2,2" BorderBrush="Gray" Background="AliceBlue">
+                                    <Image Source="/librecat;component/res/Rust2018_front.png"/>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel MaxWidth="120" Margin="15">
+                                <Border BorderThickness="1" CornerRadius="2,2,2,2" BorderBrush="Gray" Background="AliceBlue">
+                                    <Image Source="/librecat;component/res/Rust2018_front.png"/>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel Margin="15" MaxWidth="120">
+                                <Border  BorderThickness="1" CornerRadius="2,2,2,2" BorderBrush="Gray" Background="AliceBlue">
+                                    <Image Source="/librecat;component/res/Rust2018_front.png"/>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel MaxWidth="120" Margin="15">
+                                <Border BorderThickness="1" CornerRadius="2,2,2,2" BorderBrush="Gray" Background="AliceBlue">
+                                    <Image Source="/librecat;component/res/Rust2018_front.png"/>
+                                </Border>
+                            </StackPanel>
+                            <StackPanel MaxWidth="120" Margin="15">
+                                <Border BorderThickness="1" CornerRadius="2,2,2,2" BorderBrush="Gray" Background="AliceBlue">
+                                    <Image Source="/librecat;component/res/Rust2018_front.png"/>
+                                </Border>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                </StackPanel>
+                <!-- // Recent -->
+
             </StackPanel>
         </ScrollViewer>
     </DockPanel>

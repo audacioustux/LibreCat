@@ -46,9 +46,9 @@ namespace LibreCat
         //    }
         //}
 
-        //private void speech_rec(object sender, RoutedEventArgs e)
-        //{
-        //    SpeechRecognizer speechRecognizer = new SpeechRecognizer();
-        //}
+        private void speech_rec(object sender, RoutedEventArgs e)
+        {
+            SpeechRecognizer speechRecognizer = new SpeechRecognizer();
+        }
     }
 }

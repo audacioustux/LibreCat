@@ -114,5 +114,17 @@
   <ItemGroup>
     <Resource Include="Resources\search.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\popular.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\trending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\Rust2018_front.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\recent.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
